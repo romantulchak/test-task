@@ -1,0 +1,223 @@
+$primary-color: #215398;
+$dot-color: #ff3859;
+%text-shared {
+  text-align: center;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0;
+}
+%arrow-shared {
+  background: rgba(255, 255, 255, 0.05) !important;
+  padding: 12px;
+  border-radius: 50%;
+}
+@mixin text-style($fz, $lh, $color: #000) {
+  font-size: $fz;
+  line-height: $lh;
+  color: $color;
+}
+.header__page {
+  height: 84px;
+  background: #fff;
+  .header__logo {
+    height: 84px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 160px;
+      height: 38px;
+    }
+  }
+}
+.section__content_one {
+  background: $primary-color;
+  height: 466px;
+  .content__one_text {
+    color: #fff;
+    .title {
+      @extend %text-shared;
+      @include text-style(40px, 52px, #fff);
+      padding-top: 49px;
+    }
+    .paragraph {
+      @extend %text-shared;
+      @include text-style(20px, 32px, #fff);
+      margin-top: 5px;
+      margin-bottom: 40px;
+    }
+  }
+}
+.section__content_two {
+  background: #f1f6fc;
+  height: 526px;
+  .content__two_text {
+    color: #fff;
+    .title {
+      padding-top: 49px;
+      @extend %text-shared;
+      @include text-style(40px, 52px, #2d3236);
+    }
+    .title__medium {
+      margin-top: 36px;
+      margin-bottom: 24px;
+      @extend %text-shared;
+      @include text-style(30px, 30px, #2d3236);
+    }
+    .paragraph {
+      margin-top: 3px;
+      @extend %text-shared;
+      @include text-style(20px, 32px, #2d3236);
+    }
+  }
+}
+.slider {
+  text-align: center;
+  .card {
+    margin: 0 auto;
+  }
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card {
+    @extend %text-shared;
+    justify-self: center;
+    flex: 0 1 33%;
+    max-width: 332px;
+    height: 228px !important;
+    background: #fff;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+
+    div {
+      margin-left: 27px;
+      height: 114px;
+      width: 278px;
+      margin-right: 28px;
+      margin-bottom: 36px;
+    }
+    .card__title,
+    .card__paragraph {
+      width: 278px;
+    }
+    .card__title {
+      @include text-style(20px, 23.7px, #2d3236);
+      margin-bottom: 12px;
+    }
+    .card__paragraph {
+      @include text-style(15px, 24px, #808080);
+      margin-bottom: 12px;
+    }
+    .card__image {
+      margin: 0 auto;
+    }
+  }
+}
+.dot {
+  width: 32px;
+  height: 32px;
+  background: $dot-color;
+  transform: translateY(-17px);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 4px rgba(255, 56, 89, 0.2);
+}
+.arrow-r:hover {
+  @extend %arrow-shared;
+}
+.arrow-l:hover {
+  @extend %arrow-shared;
+}
+
+@media screen and (max-width: 1200px) {
+  .cards {
+    .card {
+      max-width: 290px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cards {
+    .card {
+      max-width: 235px;
+      .card__title,
+      .card__paragraph {
+        width: 220px;
+      }
+    }
+    .section__content_two {
+      height: 100%;
+      .card-flex {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .cards {
+    .card {
+      max-width: 235px;
+      .card__title,
+      .card__paragraph {
+        width: 205px;
+      }
+      .card__paragraph {
+        font-size: 13px;
+      }
+    }
+  }
+}
+@media screen and(max-width:750px) {
+  .section__content_two {
+    height: 100%;
+    .cards {
+      .card-flex {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .cards {
+    .card {
+      max-width: 290px;
+      .card__title,
+      .card__paragraph {
+        width: 278px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .cards {
+    .card {
+      max-width: 245px;
+      .card__title,
+      .card__paragraph {
+        width: 205px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .cards {
+    .card {
+      margin: 0 auto;
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .cards {
+    .card {
+      max-width: 210px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import "normalize";
+@import "layout/main";
+@import "slick-slider/slick";
+@import "slick-slider/slick-theme";
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/rubik-v11-latin-300.eot");
+    src: local(""), url("../fonts/rubik-v11-latin-300.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/rubik-v11-latin-300.woff") format("woff"),
+        url("../fonts/rubik-v11-latin-300.ttf") format("truetype"),
+        url("../fonts/rubik-v11-latin-300.svg#Rubik") format("svg");
+}
+$sm: 600px;
+$md: 780px;
+$lg: 1100px;
+$xl: 1135px;
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: $xl;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1366px) {
+    .container {
+        max-width: $lg;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: $md;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: $sm;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 550px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .container {
+        max-width: 450px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .container {
+        max-width: 350px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .container {
+        max-width: 300px;
+    }
+}
